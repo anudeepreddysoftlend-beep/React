@@ -1,0 +1,59 @@
+import { createBrowserRouter } from 'react-router-dom';
+import MainLayout from '../layouts/MainLayout';
+import Home from '../pages/Home/Home';
+import Loans from '../pages/Loans/Loans';
+import About from '../pages/About/About';
+import Contact from '../pages/Contact/Contact';
+import Forms from '../pages/Apply/Forms';
+import ThankYou from '../pages/ThankYouPage/ThankYouPage';
+import EMICalculator from '../pages/EMICalculator/EMICalculator';
+import TermsAndConditions from '../pages/TermsAndConditions/TermsAndConditions';
+import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
+
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <MainLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: 'loans',
+        element: <Loans />,
+      },
+      {
+        path: 'forms',
+        element: <Forms />,
+      },
+      {
+        path: 'about',
+        element: <About />,
+      },
+      {
+        path: 'emi-calculator',
+        element: <EMICalculator />,
+      },
+      {
+        path: 'contact',
+        element: <Contact />,
+      },
+      {
+        path: 'thank-you',
+        element: <ThankYou />,
+      },
+      {
+        path: 'terms-and-conditions',
+        element: <TermsAndConditions />,
+      },
+      {
+        path: 'privacy-policy',
+        element: <PrivacyPolicy />,
+      },
+    ],
+  },
+]);
+
+
+

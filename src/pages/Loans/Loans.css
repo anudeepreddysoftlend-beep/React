@@ -1,0 +1,191 @@
+/* ===============================
+   Loans Page Layout
+================================ */
+.loans-page {
+  padding: 40px 60px;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+}
+
+/* ===============================
+   Header Section
+================================ */
+.loans-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.loans-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.loans-header p {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* ===============================
+   Cards Grid Layout
+   3 Cards per Row
+================================ */
+.loan-banners-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===============================
+   Loan Card
+================================ */
+.loan-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 18px;
+  background: #ffffff;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.loan-banner:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   Icon
+================================ */
+.banner-icon {
+  font-size: 42px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ===============================
+   Content
+================================ */
+.banner-content {
+  flex: 1;
+}
+
+.banner-content h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.banner-content p {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+/* ===============================
+   Feature Tags
+================================ */
+.banner-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.feature-tag {
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* ===============================
+   Arrow
+================================ */
+.banner-arrow {
+  font-size: 20px;
+  font-weight: bold;
+  color: #9ca3af;
+  margin-left: 8px;
+  align-self: center;
+}
+
+/* ===============================
+   Loan Type Background Accents
+================================ */
+.personal-loan {
+  background: linear-gradient(135deg, #ffffff, #f0f9ff);
+}
+
+.business-loan {
+  background: linear-gradient(135deg, #ffffff, #ecfeff);
+}
+
+.auto-loan {
+  background: linear-gradient(135deg, #ffffff, #f0fdf4);
+}
+
+.home-loan {
+  background: linear-gradient(135deg, #ffffff, #eef2ff);
+}
+
+.property-loan {
+  background: linear-gradient(135deg, #ffffff, #fdf4ff);
+}
+
+.gold-loan {
+  background: linear-gradient(135deg, #ffffff, #fffbeb);
+}
+
+/* ===============================
+   Accessibility
+================================ */
+.loan-banner:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* ===============================
+   Responsive
+================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .loans-page {
+    padding: 32px 24px;
+  }
+
+  .loan-banners-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .loan-banners-container {
+    grid-template-columns: 1fr;
+  }
+
+  .loan-banner {
+    padding: 20px;
+  }
+}
+.loans-header {
+  margin-bottom: 16px;
+}
+
+.loans-header h1 {
+  font-size: 20px;
+}
+
+.loans-header p {
+  font-size: 12px;
+}
+
