@@ -1,130 +1,122 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import "./Loans.css";
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import './Loans.css';
 
-interface LoanBanner {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  className: string;
-  features: string[];
-}
-
-const loanBanners: LoanBanner[] = [
-  {
-    id: "personal",
-    title: "Personal Loan",
-    description:
-      "Get the funds you need for personal expenses, medical emergencies, or urgent financial needs",
-    icon: "👤",
-    className: "personal-loan",
-    features: ["Quick Approval", "Flexible Terms", "Competitive Rates"],
-  },
-  {
-    id: "business",
-    title: "Business Loan",
-    description:
-      "Fuel your business growth with working capital, expansion funds, or equipment financing",
-    icon: "💼",
-    className: "business-loan",
-    features: ["Fast Processing", "No Collateral", "Easy Documentation"],
-  },
-  {
-    id: "auto",
-    title: "Auto Loan",
-    description:
-      "Drive your dream vehicle home with hassle-free auto loan solutions",
-    icon: "🚗",
-    className: "auto-loan",
-    features: ["Low Interest", "Instant Approval", "Wide Coverage"],
-  },
-  {
-    id: "home",
-    title: "Home Loan",
-    description:
-      "Make your dream home a reality with affordable home loan options",
-    icon: "🏠",
-    className: "home-loan",
-    features: ["Low EMI", "Long Tenure", "Tax Benefits"],
-  },
-  {
-    id: "property",
-    title: "Loan Against Property",
-    description:
-      "Unlock the value of your property to meet your financial needs",
-    icon: "🏢",
-    className: "property-loan",
-    features: ["High Loan Value", "Lower Interest", "Flexible Usage"],
-  },
-  {
-    id: "gold",
-    title: "Gold Loan",
-    description:
-      "Get instant funds by pledging your gold with minimal documentation",
-    icon: "🥇",
-    className: "gold-loan",
-    features: ["Instant Disbursal", "Secure", "Minimal Paperwork"],
-  },
-];
-
-const Loans: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handleBannerClick = () => {
-    navigate("/forms");
-  };
-
-  const handleKeyDown = (
-    e: React.KeyboardEvent<HTMLDivElement>
-  ) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      handleBannerClick();
-    }
-  };
-
+function Loans() {
+  const [isLegalDropdownOpen, setIsLegalDropdownOpen] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   return (
-    <div className="loans-page">
-      <div className="loans-header">
-        <h1>Choose Your Loan Type</h1>
-        <p>
-          Select the loan that best fits your needs and start your application today
-        </p>
-      </div>
+    <div className="home-page">
+      {/* Hero Section */}
 
-      <div className="loan-banners-container">
-        {loanBanners.map((loan) => (
-          <div
-            key={loan.id}
-            className={`loan-banner ${loan.className}`}
-            onClick={handleBannerClick}
-            role="button"
-            tabIndex={0}
-            onKeyDown={handleKeyDown}
+      {/* ✅ Hidden additional keywords for search bots */}
+      <p style={{ display: "none" }}>
+        SoftLend is India's trusted digital lending platform and loan aggregator connecting borrowers with top lenders for quick loan approval and same-day disbursal.
+        Apply online for urgent cash needs, medical emergencies, travel loans, wedding loans, home renovation credit, MSME working capital loans, salary-based loans for
+        salaried and self-employed individuals, secured and unsecured loan options, and loans against gold with paperless KYC verification.
+        Check loan eligibility instantly, calculate EMI using SoftLend's loan calculator, get low-interest credit lines, fast onboarding, minimal documentation, and
+        multi-lender co-lending loan approvals in minutes.
+        Get money today, access collateral-free loans, small ticket emergency loans, consumer lending support, business line-of-credit loans, and personal finance funding
+        with instant processing through India's best fintech lenders.
+      </p>
+
+      {/* Optional multiple hidden keyword variations for stronger brand ranking */}
+      <p style={{ display: "none" }}>
+        softLend loan, SoftLend personal loan, SoftLend gold loan, SoftLend business loan, online loan SoftLend, instant approvals SoftLend,
+        loan today SoftLend, emergency funding SoftLend india, credit line SoftLend india, MSME loan SoftLend, loan aggregator SoftLend,
+        paperless loan india SoftLend, KYC loan SoftLend, salary loan SoftLend, urgent cash loan SoftLend, medical loan SoftLend,
+        wedding loan SoftLend, travel loan SoftLend, home improvement loan SoftLend, fast loans SoftLend no documents india
+      </p>
+
+      {/* Loan Categories Section */}
+      <section className="loan-categories-section">
+        <h2 className="section-title">Loans</h2>
+
+        <div className="loan-categories-grid">
+          {[
+            { label: "Personal Loan", icon: "👤" },
+            { label: "Home Loan", icon: "🏠" },
+            { label: "Business Loan", icon: "🏢" },
+            { label: "Auto Loan", icon: "🚗" },
+            { label: "Loan Against Property", icon: "🏦" },
+            { label: "Gold Loan", icon: "🪙" },
+          ].map((loan) => (
+            <Link
+              key={loan.label}
+              to="/forms"
+              className="loan-category-card"
+            >
+              <div className="loan-icon">{loan.icon}</div>
+              <div className="loan-label">{loan.label}</div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Footer Section */}
+      <footer className="home-footer">
+        <div>
+          {/* ABOUT */}
+          <Link
+            to="/about"
+            className={`footer-link footer-link-about ${hoveredLink === "about" ? "footer-link-hovered" : ""
+              }`}
+            onMouseEnter={() => setHoveredLink("about")}
+            onMouseLeave={() => setHoveredLink(null)}
           >
-            <div className="banner-icon">{loan.icon}</div>
+            About
+          </Link>
 
-            <div className="banner-content">
-              <h2>{loan.title}</h2>
-              <p>{loan.description}</p>
+          {/* CONTACT */}
+          <Link
+            to="/contact"
+            className={`footer-link footer-link-contact ${hoveredLink === "contact" ? "footer-link-hovered" : ""
+              }`}
+            onMouseEnter={() => setHoveredLink("contact")}
+            onMouseLeave={() => setHoveredLink(null)}
+          >
+            Contact
+          </Link>
 
-              <div className="banner-features">
-                {loan.features.map((feature) => (
-                  <span key={feature} className="feature-tag">
-                    {feature}
-                  </span>
-                ))}
+          {/* LEGAL DROPDOWN */}
+          <div
+            className={`footer-link-dropdown footer-link-legal ${hoveredLink === "legal" ? "footer-link-hovered" : ""
+              }`}
+            onMouseEnter={() => {
+              setHoveredLink("legal");
+              setIsLegalDropdownOpen(true);
+            }}
+            onMouseLeave={() => {
+              setHoveredLink(null);
+              setIsLegalDropdownOpen(false);
+            }}
+          >
+            <span>Legal</span>
+
+            {isLegalDropdownOpen && (
+              <div
+                className="footer-dropdown"
+                onMouseEnter={() => {
+                  setHoveredLink("legal");
+                  setIsLegalDropdownOpen(true);
+                }}
+              >
+                <Link to="/terms-and-conditions" className="footer-dropdown-item">
+                  Terms and Conditions
+                </Link>
+
+                <Link to="/privacy-policy" className="footer-dropdown-item">
+                  Privacy Policy
+                </Link>
               </div>
-            </div>
-
-            <div className="banner-arrow">→</div>
+            )}
           </div>
-        ))}
-      </div>
+        </div>
+      </footer>
+
+
     </div>
   );
-};
+}
 
 export default Loans;
-

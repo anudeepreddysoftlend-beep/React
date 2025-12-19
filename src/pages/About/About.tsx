@@ -6,7 +6,7 @@ const About: React.FC = () => {
     <div className="about-page">
       {/* Hero Section */}
       <div className="about-hero">
-        <h1>About SmoothLend</h1>
+        <h1>About SoftLend</h1>
         <p>Your trusted digital loan lead-generation and referral platform</p>
       </div>
 
@@ -16,7 +16,7 @@ const About: React.FC = () => {
           <h2 className="section-heading">Who We Are</h2>
           <div className="about-text-content">
             <p>
-              SmoothLend is a digital loan lead-generation and referral platform that helps individuals 
+              SoftLend is a digital loan lead-generation and referral platform that helps individuals 
               connect with RBI-regulated NBFCs and authorized lending partners for various loan products.
             </p>
             <p>
@@ -25,7 +25,7 @@ const About: React.FC = () => {
               lenders to help them evaluate loan eligibility and offer suitable financial products.
             </p>
             <p>
-              SmoothLend aims to simplify the loan discovery process by enabling borrowers to submit their 
+              SoftLend aims to simplify the loan discovery process by enabling borrowers to submit their 
               details through a single platform and receive communication from verified lenders.
             </p>
           </div>

@@ -1,191 +1,191 @@
 /* ===============================
-   Loans Page Layout
-================================ */
-.loans-page {
-  padding: 40px 60px;
-  background-color: #f7f9fc;
+   Global Page Styling
+=============================== */
+.home-page {
   min-height: 100vh;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #2b2f38;
 }
 
 /* ===============================
-   Header Section
-================================ */
-.loans-header {
+   Loan Categories Section
+=============================== */
+.loan-categories-section {
+  padding: 4rem 1.5rem 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
   text-align: center;
-  margin-bottom: 40px;
-}
-
-.loans-header h1 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 8px;
-}
-
-.loans-header p {
-  font-size: 16px;
-  color: #6b7280;
-}
-
-/* ===============================
-   Cards Grid Layout
-   3 Cards per Row
-================================ */
-.loan-banners-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-/* ===============================
-   Loan Card
-================================ */
-.loan-banner {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 24px;
-  border-radius: 18px;
-  background: #ffffff;
-  cursor: pointer;
-  position: relative;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-.loan-banner:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
-}
-
-/* ===============================
-   Icon
-================================ */
-.banner-icon {
-  font-size: 42px;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-/* ===============================
-   Content
-================================ */
-.banner-content {
-  flex: 1;
-}
-
-.banner-content h2 {
-  font-size: 18px;
+  font-size: 2.2rem;
   font-weight: 600;
-  color: #111827;
-  margin-bottom: 8px;
+  margin-bottom: 2.5rem;
+  color: #1f2937;
 }
 
-.banner-content p {
-  font-size: 14px;
-  color: #4b5563;
-  margin-bottom: 14px;
-  line-height: 1.5;
+/* Grid */
+.loan-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Single row on web */
+  gap: 1rem;
 }
 
-/* ===============================
-   Feature Tags
-================================ */
-.banner-features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+
+/* Card */
+.loan-category-card {
+  padding: 1.4rem 0.8rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(79, 114, 205, 0.12);
 }
 
-.feature-tag {
-  background: #eef2ff;
-  color: #3730a3;
-  font-size: 12px;
+/* Subtle hover glow */
+.loan-category-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(99, 102, 241, 0.12), rgba(59, 130, 246, 0.08));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.loan-category-card:hover::before {
+  opacity: 1;
+}
+
+.loan-category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(79, 114, 205, 0.25);
+}
+
+/* Icon */
+.loan-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Label */
+.loan-label {
+  font-size: 0.9rem;
   font-weight: 500;
-  padding: 4px 10px;
-  border-radius: 999px;
 }
 
 /* ===============================
-   Arrow
-================================ */
-.banner-arrow {
-  font-size: 20px;
-  font-weight: bold;
-  color: #9ca3af;
-  margin-left: 8px;
-  align-self: center;
+   Footer Section
+=============================== */
+.home-footer {
+  background: linear-gradient(180deg, #eef4ff, #e6eeff);
+  padding: 1.8rem 1rem;
+  box-shadow: 0 -8px 24px rgba(99, 102, 241, 0.12);
+}
+
+.home-footer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+/* Footer links */
+.footer-link,
+.footer-link-dropdown span {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  transition: color 0.25s ease;
+  position: relative;
+}
+
+.footer-link-hovered {
+  color: #4f46e5;
 }
 
 /* ===============================
-   Loan Type Background Accents
-================================ */
-.personal-loan {
-  background: linear-gradient(135deg, #ffffff, #f0f9ff);
+   Legal Dropdown
+=============================== */
+.footer-link-dropdown {
+  position: relative;
 }
 
-.business-loan {
-  background: linear-gradient(135deg, #ffffff, #ecfeff);
+.footer-dropdown {
+  position: absolute;
+  top: 130%;              /* ⬇️ show below Legal */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 0.6rem 0;
+  min-width: 190px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.25s ease;
+  z-index: 10;
 }
 
-.auto-loan {
-  background: linear-gradient(135deg, #ffffff, #f0fdf4);
+
+.footer-dropdown-item {
+  display: block;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.9rem;
+  color: #334155;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
-.home-loan {
-  background: linear-gradient(135deg, #ffffff, #eef2ff);
-}
-
-.property-loan {
-  background: linear-gradient(135deg, #ffffff, #fdf4ff);
-}
-
-.gold-loan {
-  background: linear-gradient(135deg, #ffffff, #fffbeb);
+.footer-dropdown-item:hover {
+  background: #f1f5ff;
+  color: #4f46e5;
 }
 
 /* ===============================
-   Accessibility
-================================ */
-.loan-banner:focus {
-  outline: 2px solid #6366f1;
-  outline-offset: 2px;
+   Animations
+=============================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -6px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }
+
 
 /* ===============================
-   Responsive
-================================ */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .loans-page {
-    padding: 32px 24px;
+   Responsive Tweaks
+=============================== */
+@media (max-width: 768px) {
+  .loan-categories-grid {
+    grid-template-columns: repeat(3, 1fr); /* 2 rows on mobile */
+    gap: 0.8rem;
   }
 
-  .loan-banners-container {
-    grid-template-columns: repeat(2, 1fr);
+  .loan-category-card {
+    padding: 1.2rem 0.6rem;
+  }
+
+  .loan-icon {
+    font-size: 1.8rem;
+  }
+
+  .loan-label {
+    font-size: 0.85rem;
   }
 }
 
-/* Mobile */
-@media (max-width: 640px) {
-  .loan-banners-container {
-    grid-template-columns: 1fr;
-  }
-
-  .loan-banner {
-    padding: 20px;
-  }
+/* Arrow indicator (premium look) */
+.footer-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -8px; /* arrow above dropdown */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 8px 8px 8px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+  filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.08));
 }
-.loans-header {
-  margin-bottom: 16px;
-}
-
-.loans-header h1 {
-  font-size: 20px;
-}
-
-.loans-header p {
-  font-size: 12px;
-}
-

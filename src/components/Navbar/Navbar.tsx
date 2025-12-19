@@ -13,7 +13,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-brand">
-          <Link to="/">SmoothLend</Link>
+          <Link to="/">SoftLend</Link>
           <h6 style={{color:'white'}}>Where Borrower Meets Lender.</h6>
         </div>
         <ul className="navbar-menu">
@@ -21,14 +21,6 @@ function Navbar() {
             <Link 
               to="/" 
               className={isActive('/') ? 'active' : ''}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/loans" 
-              className={isActive('/loans') ? 'active' : ''}
             >
               Loans
             </Link>

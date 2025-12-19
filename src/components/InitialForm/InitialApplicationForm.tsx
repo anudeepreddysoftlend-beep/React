@@ -444,7 +444,7 @@ const InitialApplicationForm: React.FC<{ onSuccess?: (data: FormData) => void }>
               <Link to="/privacy-policy" className="terms-link">
                 Privacy Policy
               </Link>
-              {' '}of www.smoothlend.in.                                 I also agree to receive calls, WhatsApp messages, and SMS from SmoothLend or its partners regarding loan offers, even if my number is registered under DND. I understand that I can withdraw my consent at any time.
+              {' '}of www.softlend.in.                                 I also agree to receive calls, WhatsApp messages, and SMS from SoftLend or its partners regarding loan offers, even if my number is registered under DND. I understand that I can withdraw my consent at any time.
             </span>
           </label>
           {errors.termsAccepted && (

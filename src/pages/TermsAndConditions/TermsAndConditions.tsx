@@ -5,167 +5,167 @@ const TermsAndConditions: React.FC = () => {
   return (
     <div className="terms-page">
       <div className="terms-hero">
-        <h1>Terms and Conditions — SmoothLend</h1>
+        <h1>Terms and Conditions — SoftLend</h1>
         <p>Last updated: {'12/08/2025'}</p>
       </div>
 
       <div className="terms-content">
-      <section className="terms-section">
-        <p>Welcome to SmoothLend (“Website”). By accessing or using this Website, you (“User”) agree to be bound by these Terms & Conditions (“Terms”). If you do not agree, please do not use this Website.</p>
+        <section className="terms-section">
+          <p>Welcome to SoftLend (“Website”). By accessing or using this Website, you (“User”) agree to be bound by these Terms & Conditions (“Terms”). If you do not agree, please do not use this Website.</p>
         </section>
         <section className="terms-section">
           <h2>1. Nature of Services</h2>
           <p>
-          SmoothLend is a loan lead-generation platform.
-We do not provide loans directly.
-We collect your information and share it with our lending partners (NBFCs/Banks/DSAs) to help process your loan application and provide loan offers.
+            SoftLend is a loan lead-generation platform.
+            We do not provide loans directly.
+            We collect your information and share it with our lending partners (NBFCs/Banks/DSAs) to help process your loan application and provide loan offers.
           </p>
         </section>
 
         <section className="terms-section">
           <h2>2. User Eligibility</h2>
           <p>
-          You confirm that:
+            You confirm that:
 
-You are an Indian citizen
+            You are an Indian citizen
 
-You are 18 years or older
+            You are 18 years or older
 
-You are submitting information voluntarily
+            You are submitting information voluntarily
           </p>
         </section>
 
         <section className="terms-section">
           <h2>3. Information You Provide</h2>
           <p>
-          By using this Website, you may be required to submit personal information including but not limited to:
+            By using this Website, you may be required to submit personal information including but not limited to:
 
-Name
+            Name
 
-Phone number
+            Phone number
 
-Email ID
+            Email ID
 
-PAN
+            PAN
 
-Last 4 digits of Aadhaar (optional)
+            Last 4 digits of Aadhaar (optional)
 
-Income details
+            Income details
 
-Required loan amount
+            Required loan amount
 
-This information is collected solely for loan processing and verification by lending partners.
+            This information is collected solely for loan processing and verification by lending partners.
           </p>
         </section>
 
         <section className="terms-section">
           <h2>4. Consent to Share Information</h2>
           <p>
-          By submitting your details, you explicitly authorize SmoothLend to:
+            By submitting your details, you explicitly authorize SoftLend to:
 
-Collect and use your information for loan assessment
+            Collect and use your information for loan assessment
 
-Share your information with our lending partners, NBFCs, banks, and authorized DSAs
+            Share your information with our lending partners, NBFCs, banks, and authorized DSAs
 
-Allow them to contact you for loan-related communication
+            Allow them to contact you for loan-related communication
 
-This includes communication through phone calls, SMS, WhatsApp, or email.
+            This includes communication through phone calls, SMS, WhatsApp, or email.
           </p>
         </section>
 
         <section className="terms-section">
           <h2>5. DND Consent (Important)</h2>
           <p>
-          You acknowledge and agree that:
+            You acknowledge and agree that:
 
-“Even if my mobile number is registered under DND (Do Not Disturb), I consent to receive calls, SMS, WhatsApp messages, or emails from SmoothLend or its lending partners regarding my loan application.”
+            “Even if my mobile number is registered under DND (Do Not Disturb), I consent to receive calls, SMS, WhatsApp messages, or emails from SoftLend or its lending partners regarding my loan application.”
 
-If you do not want communication, you may withdraw consent anytime (see Section 10).
+            If you do not want communication, you may withdraw consent anytime (see Section 10).
           </p>
         </section>
 
         <section className="terms-section">
           <h2>6. Accuracy of Information</h2>
           <p>
-          You agree that all information provided is:
+            You agree that all information provided is:
 
-True
+            True
 
-Accurate
+            Accurate
 
-Complete
+            Complete
 
-Providing false information may result in rejection of your loan request.
+            Providing false information may result in rejection of your loan request.
           </p>
         </section>
 
         <section className="terms-section">
           <h2>7. No Guarantee of Loan Approval</h2>
           <p>
-          SmoothLend is only a facilitator.
-We do not guarantee:
+            SoftLend is only a facilitator.
+            We do not guarantee:
 
-Loan approval
+            Loan approval
 
-Loan amount
+            Loan amount
 
-Interest rate
+            Interest rate
 
-Timeline of processing
+            Timeline of processing
 
-These decisions are made entirely by the respective lender.
+            These decisions are made entirely by the respective lender.
           </p>
         </section>
 
         <section className="terms-section">
           <h2>8. Third-Party Links</h2>
           <p>
-          This Website may contain links to third-party platforms (NBFCs/banks).
-          SmoothLend is not responsible for their content, policies, or decisions.
+            This Website may contain links to third-party platforms (NBFCs/banks).
+            SoftLend is not responsible for their content, policies, or decisions.
           </p>
         </section>
 
         <section className="terms-section">
           <h2>9. Limitation of Liability</h2>
           <p>
-          SmoothLend shall not be liable for:
+            SoftLend shall not be liable for:
 
-Any delay or rejection of your loan
+            Any delay or rejection of your loan
 
-Any financial loss
+            Any financial loss
 
-Any communication made by partner lenders
+            Any communication made by partner lenders
 
-Any breach by third-party service providers
+            Any breach by third-party service providers
 
-You agree to use this Website at your own risk.
+            You agree to use this Website at your own risk.
           </p>
         </section>
 
         <section className="terms-section">
           <h2>10. Consent Withdrawals</h2>
           <p>
-          You may withdraw your consent anytime by writing to:
-          📧 <a href="mailto:support@smoothlend.in">support@smoothlend.in</a> 
+            You may withdraw your consent anytime by writing to:
+            📧 <a href="mailto:support@softlend.in">support@softlend.in</a>
 
-Upon withdrawal, we will stop sharing your data further, but already shared data cannot be recalled from lenders.
+            Upon withdrawal, we will stop sharing your data further, but already shared data cannot be recalled from lenders.
           </p>
         </section>
 
         <section className="terms-section">
           <h2>11. Data Protection Compliance</h2>
           <p>
-          SmoothLend follows reasonable security practices as required under the Digital Personal Data Protection Act, 2023 (DPDPA).
+            SoftLend follows reasonable security practices as required under the Digital Personal Data Protection Act, 2023 (DPDPA).
 
-Your data will be:
+            Your data will be:
 
-Collected only with consent
+            Collected only with consent
 
-Used only for stated purposes
+            Used only for stated purposes
 
-Shared only with authorized lending partners
+            Shared only with authorized lending partners
 
-Retained only as long as required for loan processing
+            Retained only as long as required for loan processing
 
           </p>
         </section>
@@ -173,34 +173,34 @@ Retained only as long as required for loan processing
         <section className="terms-section">
           <h2>12. Intellectual Property</h2>
           <p>
-          All content, logos, text, and design on this Website are the property of SmoothLend and cannot be copied without permission.
+            All content, logos, text, and design on this Website are the property of SoftLend and cannot be copied without permission.
           </p>
         </section>
 
         <section className="terms-section">
           <h2>13. Changes to Terms</h2>
           <p>
-          SmoothLend reserves the right to update these Terms anytime.
-          Changes will be posted on this page with a revised “Last Updated” date.
+            SoftLend reserves the right to update these Terms anytime.
+            Changes will be posted on this page with a revised “Last Updated” date.
           </p>
         </section>
 
         <section className="terms-section">
           <h2>14. Governing Law</h2>
           <p>
-          These Terms are governed by the laws of India.
-          Any disputes shall be handled exclusively in courts located in Bangalore, Karnataka.
+            These Terms are governed by the laws of India.
+            Any disputes shall be handled exclusively in courts located in Bangalore, Karnataka.
           </p>
         </section>
 
         <section className="terms-section">
           <h2>15. Contact Us</h2>
           <p>
-          For any questions or complaints, reach us at:
+            For any questions or complaints, reach us at:
 
-          📧 <a href="mailto:support@smoothlend.in">support@smoothlend.in</a> 
+            📧 <a href="mailto:support@softlend.in">support@softlend.in</a>
 
-📍 Bangalore, India
+            📍 Bangalore, India
           </p>
         </section>
       </div>
@@ -209,10 +209,6 @@ Retained only as long as required for loan processing
 };
 
 export default TermsAndConditions;
-
-
-
-
 
 
 
