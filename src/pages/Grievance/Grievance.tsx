@@ -15,10 +15,10 @@ const Grievance: React.FC = () => {
 
           <ul>
             <li><strong>Name:</strong> Anudeep Reddy</li>
-            <li><strong>Designation:</strong> [Title]</li>
+            <li><strong>Designation:</strong> Chief Operating Officer</li>
             <li><strong>Email:</strong> <a href="mailto:anudeepreddy.softlend@gmail.com">anudeepreddy.softlend@gmail.com</a></li>
             <li><strong>Phone:</strong> +91 9480080044</li>
-            <li><strong>Address:</strong> [Office Address, if applicable]</li>
+            <li><strong>Address:</strong> # 7, 1st Cross Second main, Ganganagar, Bangalore 560032</li>
           </ul>
 
           <p className="resolution-note">
