@@ -1,14 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import Home from '../pages/Home/Home';
-import Loans from '../pages/Loans/Loans';
 import About from '../pages/About/About';
 import Contact from '../pages/Contact/Contact';
-import Forms from '../pages/Apply/Forms';
+import Forms from '../pages/Apply/Apply';
 import ThankYou from '../pages/ThankYouPage/ThankYouPage';
 import EMICalculator from '../pages/EMICalculator/EMICalculator';
 import TermsAndConditions from '../pages/TermsAndConditions/TermsAndConditions';
 import PrivacyPolicy from '../pages/PrivacyPolicy/PrivacyPolicy';
+import Grievance from '../pages/Grievance/Grievance';
 
 export const router = createBrowserRouter([
   {
@@ -18,10 +18,6 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-      },
-      {
-        path: 'loans',
-        element: <Loans />,
       },
       {
         path: 'forms',
@@ -50,6 +46,10 @@ export const router = createBrowserRouter([
       {
         path: 'privacy-policy',
         element: <PrivacyPolicy />,
+      },
+            {
+        path:'grievance',
+        element: <Grievance />,
       },
     ],
   },

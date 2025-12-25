@@ -80,12 +80,21 @@ function Home() {
             className={`footer-link-dropdown footer-link-legal ${hoveredLink === "legal" ? "footer-link-hovered" : ""
               }`}
             onMouseEnter={() => {
-              setHoveredLink("legal");
-              setIsLegalDropdownOpen(true);
+              if (window.innerWidth > 768) { // Desktop hover
+                setHoveredLink("legal");
+                setIsLegalDropdownOpen(true);
+              }
             }}
             onMouseLeave={() => {
-              setHoveredLink(null);
-              setIsLegalDropdownOpen(false);
+              if (window.innerWidth > 768) { // Desktop hover
+                setHoveredLink(null);
+                setIsLegalDropdownOpen(false);
+              }
+            }}
+            onClick={() => {
+              if (window.innerWidth <= 768) { // Mobile click
+                setIsLegalDropdownOpen((open) => !open);
+              }
             }}
           >
             <span>Legal</span>
@@ -93,10 +102,6 @@ function Home() {
             {isLegalDropdownOpen && (
               <div
                 className="footer-dropdown"
-                onMouseEnter={() => {
-                  setHoveredLink("legal");
-                  setIsLegalDropdownOpen(true);
-                }}
               >
                 <Link to="/terms-and-conditions" className="footer-dropdown-item">
                   Terms and Conditions
@@ -105,6 +110,10 @@ function Home() {
                 <Link to="/privacy-policy" className="footer-dropdown-item">
                   Privacy Policy
                 </Link>
+                <Link to="/grievance" className="footer-dropdown-item">
+                  Grievance
+                </Link>
+                
               </div>
             )}
           </div>

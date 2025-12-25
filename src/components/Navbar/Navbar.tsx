@@ -12,10 +12,12 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="navbar-brand">
-          <Link to="/">SoftLend</Link>
-          <h6 style={{color:'white'}}>Where Borrower Meets Lender.</h6>
-        </div>
+          <div className="navbar-brand">
+            <Link to="/">
+              <span className="brand-title">SoftLend</span>
+              <span className="brand-subtitle">Where Borrower Meets Lender.</span>
+            </Link>
+          </div>
         <ul className="navbar-menu">
           <li>
             <Link 
@@ -23,14 +25,6 @@ function Navbar() {
               className={isActive('/') ? 'active' : ''}
             >
               Loans
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/about" 
-              className={isActive('/about') ? 'active' : ''}
-            >
-              About
             </Link>
           </li>
           <li>

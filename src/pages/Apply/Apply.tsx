@@ -1,6 +1,6 @@
 // Forms.tsx
 import React, { useState } from 'react';
-import './Forms.css';
+import './Apply.css';
 import InitialApplicationForm from '../../components/InitialForm/InitialApplicationForm';
 import MultiStepForm from '../../components/MultiStepForm/MultiStepForm';
 import axios from 'axios';
@@ -34,6 +34,7 @@ const Forms: React.FC = () => {
                   contact_number: data.contactNumber,
                   email_address: data.email,
                   new_take_home_salary: Number(data.netTakeHomeSalary),
+                  consent: data.termsAccepted,
 
                   lead: {
                     loan_amount_required: Number(data.loanAmount),
@@ -42,13 +43,13 @@ const Forms: React.FC = () => {
                 }
               };
 
-              console.log("Mapped Payload:", payload);
+              console.log("Mapped Payload:", JSON.stringify(payload));
 
 
               try {
                 // 2. API CALL HERE
                 const response = await axios.post(
-                  "https://smooth-go-app.fly.dev/customer",
+                  "https://j5rpiig7656zd54cyhn6lxhiuq0qictj.lambda-url.ap-south-1.on.aws/customer",
                   payload,
                   {
                     headers: {
@@ -60,7 +61,7 @@ const Forms: React.FC = () => {
                 console.log("API Success:", response.data);
 
                 // 3. Show next form section
-                setShowMainForm(true);
+                // setShowMainForm(true);
                 window.scrollTo({ top: 0, behavior: "smooth" });
 
               } catch (error: any) {
@@ -73,7 +74,7 @@ const Forms: React.FC = () => {
                 }
               }
 
-              setShowMainForm(true);
+              // setShowMainForm(true);
 
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}

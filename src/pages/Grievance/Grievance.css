@@ -1,0 +1,126 @@
+.grievance-page {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Hero Section */
+.grievance-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 3rem 2rem;
+  background: var(--gradient-primary);
+  border-radius: 2rem;
+  color: white;
+  box-shadow: var(--shadow-xl);
+}
+
+.grievance-hero h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+}
+
+.grievance-hero p {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+/* Content Card */
+.grievance-content {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Section */
+.grievance-section {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* List Styling */
+.grievance-section ul {
+  margin: 1.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.grievance-section li {
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.grievance-section li strong {
+  color: var(--text-primary);
+}
+
+/* Resolution Note */
+.resolution-note {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.95rem;
+}
+
+/* Links */
+.grievance-section a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.grievance-section a:hover {
+  text-decoration: underline;
+}
+
+.grievance-section a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grievance-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .grievance-hero {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .grievance-hero h1 {
+    font-size: 2rem;
+  }
+
+  .grievance-hero p {
+    font-size: 1rem;
+  }
+
+  .grievance-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grievance-hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .grievance-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .grievance-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .grievance-section {
+    font-size: 0.95rem;
+  }
+}

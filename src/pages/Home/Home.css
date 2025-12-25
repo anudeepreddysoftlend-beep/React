@@ -2,7 +2,6 @@
    Global Page Styling
 =============================== */
 .home-page {
-  min-height: 100vh;
   background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
   font-family: 'Inter', 'Segoe UI', sans-serif;
   color: #2b2f38;
@@ -162,21 +161,44 @@
 @media (max-width: 768px) {
   .loan-categories-grid {
     grid-template-columns: repeat(3, 1fr); /* 2 rows on mobile */
-    gap: 0.8rem;
+    gap: 0.55rem;
+    margin-bottom: 2.2rem;
   }
 
   .loan-category-card {
-    padding: 1.2rem 0.6rem;
+    padding: 0.78rem 0.32rem;
+    border-radius: 10px;
   }
 
   .loan-icon {
-    font-size: 1.8rem;
+    font-size: 1.22rem;
   }
 
   .loan-label {
-    font-size: 0.85rem;
+    font-size: 0.65rem;
+  }
+
+  /* Footer shrink for mobile */
+  .home-footer {
+    padding: 0.7rem 0.35rem;
+  }
+  .home-footer > div {
+    gap: 1.2rem;
+  }
+  .footer-link, .footer-link-dropdown span {
+    font-size: 0.81rem;
+    padding: 0.31rem 0.45rem;
+  }
+  .footer-dropdown {
+    min-width: 120px;
+    padding: 0.23rem 0;
+  }
+  .footer-dropdown-item {
+    padding: 0.43rem 0.6rem;
+    font-size: 0.78rem;
   }
 }
+
 
 /* Arrow indicator (premium look) */
 .footer-dropdown::before {
