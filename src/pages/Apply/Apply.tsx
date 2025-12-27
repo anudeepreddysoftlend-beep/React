@@ -7,7 +7,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const Forms: React.FC = () => {
-  const [showMainForm, setShowMainForm] = useState(false);
+  const [showMainForm] = useState(false);
   const navigate = useNavigate();
 
   return (
